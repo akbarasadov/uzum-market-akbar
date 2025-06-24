@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Gilroy;
+}
+
+h1.yes {
+    font-size: 22px;
+    color: #1f2026;
+}
+
+p.yes {
+    font-size: 14px;
+    font-weight: 400;
+    color: #4d4f59;
+}
+
+.none_h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1f2026;
+    padding-bottom: 10px;
+}
+
+.none_p {
+    font-weight: 400;
+    font-size: 12.8px;
+}
+
+.none_img {
+    height: 128px;
+    width: 128px;
+    margin-bottom: 20px;
+}
+
+.searched_products.none {
+    text-align: center;
+    padding-top: 15%;
+}
+
+.flex_left.none {
+    display: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex_left {
+    display: block;
+}
+
+.flex_left h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2026;
+    padding-bottom: 20px;
+    width: 100px;
+}
+
+.flex_right {
+    width: 100%;
+}
+
+.color {
+    width: 22px;
+    height: 22px;
+    border-radius: 17px;
+    border: 1px solid #c0bbbb;
+}
+
+.to_color {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.to_color p {
+    color: #1f2026;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* .search_left_yes {
+    border: 1px solid #e7e5e5;
+    border-top: none;
+    box-shadow: 0 4px 4px rgba(54, 55, 64, .25);
+    border-radius: 0 0 12px 12px;
+    background-color: #fff;
+    top: 500px;  
+    left: 0;
+    right: 10px;
+    opacity: 1;
+    position: absolute;
+    transition: all .4s;
+    z-index: 100001;
+} */
+
+.search_left_yes_container {
+    width: 15%;
+}
+
+.search_left_none {
+    border: 1px solid #e7e5e5;
+    border-top: none;
+    box-shadow: 0 4px 4px rgba(54, 55, 64, .25);
+    border-radius: 0 0 12px 12px;
+    background-color: #fff;
+    box-sizing: border-box;
+    width: 100%;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    transition: all .4s;
+    z-index: 100001;
+}
+
+.none_diagonal {
+    display: none;
+}
+
+.to_diagonal {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 0 5px;
+}
+
+.all_diagonal {
+    margin-top: 30px;
+}
+
+.all_diagonal h3 {
+    padding-bottom: 20px;
+}
+
+.checkbox {
+    width: 15px;
+    height: 15px;
+}

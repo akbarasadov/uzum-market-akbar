@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Gilroy;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.body {
+    display: flex;
+
+
+    h1 {
+        font-weight: 600;
+        font-size: 32px;
+        padding: 24px 0 26px;
+    }
+
+    .sale_price {
+        font-family: Gilroy;
+        font-weight: 600;
+        font-size: 28px;
+    }
+
+    .gar {
+        font-family: Gilroy;
+        font-weight: 500;
+        font-size: 21px;
+        text-decoration: line-through;
+        color: #ACACAC;
+    }
+
+    .to_gar_text {
+        color: #ff1a8c;
+        font-weight: 500;
+        font-size: 17px;
+        padding-bottom: 10px;
+    }
+
+    .to_sale_text {
+        font-size: 28px;
+        font-weight: 700;
+        color: #ff1a8c;
+    }
+
+    .prices {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        padding-bottom: 26px;
+    }
+
+    .btnsab:hover {
+        cursor: pointer;
+    }
+
+    .pices {
+        width: 89px;
+        height: 30px;
+        border-radius: 3px;
+        border: 1px solid #ACACAC;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 9px;
+        margin-bottom: 26px;
+    }
+
+    .pices button {
+        all: unset;
+    }
+
+    .description {
+        font-family: Gilroy;
+        font-weight: 400;
+        font-size: 14px;
+        padding-bottom: 26px;
+    }
+
+    .btn1 {
+        width: 176px;
+        height: 32px;
+        font-family: Gilroy;
+        font-weight: 600;
+        font-size: 13px;
+        color: #FFFFFF;
+        border-radius: 4px;
+        background: #7000FF;
+        border: none;
+    }
+
+    .btn2 {
+        width: 176px;
+        height: 32px;
+        border-radius: 4px;
+        border: 1px solid #7000FF;
+        color: #7000FF;
+        background: none;
+        font-family: Gilroy;
+        font-weight: 500;
+        font-size: 13px;
+    }
+
+    .line {
+        border: 1px solid #ACACAC;
+        width: 100%;
+        margin-bottom: 26px;
+    }
+
+    .all img {
+        width: 83px;
+        height: 111px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left {
+        display: flex;
+        gap: 10px;
+        margin-right: 53px;
+    }
+
+    .bg img {
+        width: 380px;
+        height: 461px;
+    }
+
+    .logo-image {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .all {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+}

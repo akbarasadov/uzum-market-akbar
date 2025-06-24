@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Gilroy;
+}
+
+.pices {
+    font-size: 14px;
+    font-weight: 400;
+    color: #4d4f59;
+    padding-top: 5px;
+}

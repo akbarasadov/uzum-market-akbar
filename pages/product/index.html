@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzum Market</title>
+    <link rel="stylesheet" href="/pages/style/product.css">
+    <link rel="stylesheet" href="/pages/style/header.css">
+    <link rel="stylesheet" href="/pages/style/all-products.css">
+    <link rel="stylesheet"
+        href="https://gistcdn.githack.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="/index.html">
+                <img class="uzum_logo" src="/public/logo1.png" alt="">
+            </a>
+            <button class="catalog_btn">Каталог</button>
+            <div class="all_search">
+
+                <div class="search-container">
+                    <div class="search-dropdown search_left_none">
+                        <div class="searched">
+
+                            <div class="recent-title">
+                                <h1>Вы недавно искали </h1>
+                                <p class="clear">Очистить</p>
+                            </div>
+                            <ul class="recent-searches">
+                                <li class="searched_block">
+                                    <div class="left_li">
+                                        <img src="https://marketplace.canva.com/Njmq0/MADBWZNjmq0/2/tl/canva-time-icon-MADBWZNjmq0.png"
+                                            alt="">
+                                        <p>iphone 16 pro max</p>
+                                    </div>
+                                    <span class="remove">✖</span>
+                                </li>
+                                <li class="searched_block">
+                                    <div class="left_li">
+                                        <img src="https://marketplace.canva.com/Njmq0/MADBWZNjmq0/2/tl/canva-time-icon-MADBWZNjmq0.png"
+                                            alt="">
+                                        <p>iphone 16 pro max чехол</p>
+                                    </div>
+                                    <span class="remove">✖</span>
+                                </li>
+                                <li class="searched_block">
+                                    <div class="left_li">
+                                        <img src="https://marketplace.canva.com/Njmq0/MADBWZNjmq0/2/tl/canva-time-icon-MADBWZNjmq0.png"
+                                            alt="">
+                                        <p>apple watch ultra 2</p>
+                                    </div>
+                                    <span class="remove">✖</span>
+                                </li>
+                                <li class="searched_block">
+                                    <div class="left_li">
+                                        <img src="https://marketplace.canva.com/Njmq0/MADBWZNjmq0/2/tl/canva-time-icon-MADBWZNjmq0.png"
+                                            alt="">
+                                        <p>telefonlar</p>
+                                    </div>
+                                    <span class="remove">✖</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <input class="input_search" type="search" placeholder="Искать товары">
+            </div>
+            <div class="right">
+                <a class="sign-in block" href="/pages/sign-in/index.html">
+                    <img src="/public/account.webp" alt="">
+                    <p>Войти</p>
+                </a>
+                <a class="love block" href="/pages/favorites/index.html">
+                    <img src="/public/love.png" alt="">
+                    <p>Избранное</p>
+                </a>
+                <a class="basket block" href="/pages/basket/index.html">
+                    <img src="/public/Basket.png" alt="">
+                    <p>Корзина</p>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="background"></div>
+
+        <div class="bottom" style="display: none;"></div>
+
+        <div class="catalog">
+            <p class="p">Категории товаров</p>
+            <div class="categ">
+
+            </div>
+        </div>
+
+        <div class="search-container">
+            <div class="search-dropdown search_left_yes">
+                <div class="searched">
+
+                    <div class="recent-title">
+                        <h1>Вы недавно искали </h1>
+                        <p class="clear">Очистить</p>
+                    </div>
+                    <ul class="recent-searches">
+                        <li class="searched_block">
+                            <div class="left_li">
+                                <img src="https://marketplace.canva.com/Njmq0/MADBWZNjmq0/2/tl/canva-time-icon-MADBWZNjmq0.png"
+                                    alt="">
+                                <p>iphone 16 pro max</p>
+                            </div>
+                            <span class="remove">✖</span>
+                        </li>
+                        <li class="searched_block">
+                            <div class="left_li">
+                                <img src="https://marketplace.canva.com/Njmq0/MADBWZNjmq0/2/tl/canva-time-icon-MADBWZNjmq0.png"
+                                    alt="">
+                                <p>iphone 16 pro max чехол</p>
+                            </div>
+                            <span class="remove">✖</span>
+                        </li>
+                        <li class="searched_block">
+                            <div class="left_li">
+                                <img src="https://marketplace.canva.com/Njmq0/MADBWZNjmq0/2/tl/canva-time-icon-MADBWZNjmq0.png"
+                                    alt="">
+                                <p>apple watch ultra 2</p>
+                            </div>
+                            <span class="remove">✖</span>
+                        </li>
+                        <li class="searched_block">
+                            <div class="left_li">
+                                <img src="https://marketplace.canva.com/Njmq0/MADBWZNjmq0/2/tl/canva-time-icon-MADBWZNjmq0.png"
+                                    alt="">
+                                <p>telefonlar</p>
+                            </div>
+                            <span class="remove">✖</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="to_product"></div>
+
+        <div class="grid"></div>
+    </div>
+
+    <script type="module" src="/pages/product/script.js"></script>
+</body>
+
+</html>
