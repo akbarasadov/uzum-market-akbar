@@ -113,9 +113,11 @@
 
     .all img {
         width: 83px;
-        height: 111px;
+        height: 100px;
         display: flex;
         flex-direction: column;
+        object-fit: contain;
+        cursor: pointer;
     }
 
     .left {
@@ -127,6 +129,8 @@
     .bg img {
         width: 380px;
         height: 461px;
+        object-fit: contain;
+        transition: 0.3s;
     }
 
     .logo-image {
@@ -141,5 +145,14 @@
         display: flex;
         flex-direction: column;
         gap: 6px;
+    }
+
+    .product_bg_img {
+        transition: 0.3s;
+    }
+
+    .active_img {
+        border-radius: 15px;
+        border: 1px solid black;
     }
 }

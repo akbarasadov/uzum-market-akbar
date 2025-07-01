@@ -49,7 +49,6 @@ h1 {
 
 .bg-image {
     width: 143px;
-    top: 249px;
     left: 224px;
     border-radius: 5px;
 }
@@ -137,8 +136,8 @@ h1 {
 .buy {
     width: 100%;
     height: 32px;
-    border-radius: 4px;
-    background: #7000FF;
+    border-radius: 10px;
+    background: #7000ff;
     border: none;
     color: white;
     cursor: pointer;

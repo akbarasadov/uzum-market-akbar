@@ -90,8 +90,28 @@ for (const color of uniqueColors) {
         <p>${color}</p>
     `;
 
+    div.onclick = () => {
+
+        filteredProducts.forEach(async product => {
+            // console.log(product);
+
+            let productcol = product.colors[0]
+
+            console.log(productcol, color);
+
+            console.log(products);
+
+            // if (productcol === color) {
+            //     // reload(product, Products, grid);
+
+
+            // }
+        })
+    }
+
     All_colors.append(div);
 }
+
 
 
 let flex_left = document.querySelector(".flex_left")
@@ -347,7 +367,7 @@ searchInput.oninput = () => {
         // let parsedProducts = [new Set(product)];
 
         // console.log(parsedProducts);
-        
+
 
         div.innerHTML = `
             <div class="left_li">

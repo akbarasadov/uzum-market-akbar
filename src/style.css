@@ -5,7 +5,7 @@
     font-family: Gilroy;
 }
 
-img:hover {
+.popular img:hover {
     transition: 0.3s;
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
@@ -348,9 +348,17 @@ button:hover {
     height: 10%;
     border-top: 1px solid #7e818c;
     position: fixed;
-    z-index: 100000000; 
+    z-index: 100000000;
     background-color: #fff;
     bottom: 0;
     right: 0;
     left: 0;
+}
+
+.image123 {
+    width: 90%;
+    margin-top: 50px;
+    border-radius: 20px;
+    transition: 0.3s;
+    justify-content: center;
 }

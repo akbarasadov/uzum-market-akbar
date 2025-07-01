@@ -27,7 +27,9 @@ export function Favorites(item) {
     products.innerHTML = `
 
         <div class="image-wrapper">
-            <img class="bg-image" src="${item.media[0]}" alt="">
+            <div class="img_container">
+                <img class="bg-image" src="${item.media[0]}" alt="">
+            </div>
             <button class="logo-image favorites" data-v-6020a086="" ui-button=""
                 class="noselect product-card-like" data-test-id="button__add-to-favorites">
                 <img src="/public/Vector (1).png" alt="">

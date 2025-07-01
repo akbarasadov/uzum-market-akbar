@@ -242,12 +242,24 @@ if (product.length === 0) {
 
     to_chosen.classList.add("chosen_null")
 
-    to_chosen.innerHTML = `
-        <img src="/public/hearts 1.png" alt="">
-        <h1 class="chosen_null_h1">Добавьте то, что понравилось</h1>
-        <p class="chosen_null_p">Нажмите на ♡ в товаре. Войдите в аккаунт и всё избранное сохранится</p>
-        <button class="signbtn">Войти в аккаунт</button>
-    `
+    let password = localStorage.getItem("userspassword")
+    let email = localStorage.getItem("usersemail")
+
+    if (password || email) {
+        to_chosen.innerHTML = `
+            <img src="/public/hearts 1.png" alt="">
+            <h1 class="chosen_null_h1">Добавьте то, что понравилось</h1>
+            <p class="chosen_null_p">Перейдите на главную страницу и нажмите на ♡ в товаре</p>
+            <p class="chosen_null_p">На главную</p>
+        `
+    } else {
+        to_chosen.innerHTML = `
+            <img src="/public/hearts 1.png" alt="">
+            <h1 class="chosen_null_h1">Добавьте то, что понравилось</h1>
+            <p class="chosen_null_p">Нажмите на ♡ в товаре. Войдите в аккаунт и всё избранное сохранится</p>
+            <button class="signbtn">Войти в аккаунт</button>
+        `
+    }
 } else {
     setTimeout(() => {
         attachFavoriteEvents();

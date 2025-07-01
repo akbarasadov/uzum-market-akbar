@@ -36,7 +36,7 @@ export function Products(item) {
     <div class="data">
         <p class="a_title_a">${item.title}</p>
         <div class="raiting">
-            <svg data-v-5a662906="" width="14" height="14" viewBox="0 0 18 18" fill="none"
+            <svg data-v-5a662906="" class="rating_star" viewBox="0 0 18 18" fill="none"
                 xmlns="http://www.w3.org/2000/svg" data-test-id="icon__rating-star"
                 class="ui-icon  rating-icon">
                 <path

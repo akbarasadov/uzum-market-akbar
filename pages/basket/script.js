@@ -90,7 +90,7 @@ const showEmptyBasket = () => {
     basket.innerHTML = `
         <img src="/public/shopocat 1 (1).png" alt="">
         <h2 class="basket_null_h2">В корзине пока нет товаров</h2>
-        <p>Нажмите на ♡ в товаре. Войдите в аккаунт и всё избранное сохранится</p>
+        <p>Начните с подборок на главной странице или найдите нужный товар через поиск</p>
     `;
     basket.classList.add("basket_null");
 };
@@ -398,11 +398,50 @@ if (password || email) {
     sign.setAttribute("href", "/pages/sign-in/index.html")
 }
 
-let pices = localStorage.getItem("basket_pices")
+// let pices = localStorage.getItem("basket_pices")
 
 
-let lastProduct = products[products.length - 1];
+// let lastProduct = products[products.length - 1];
 
-let pices_text = lastProduct.querySelector(".text")
+// let pices_text = lastProduct.querySelector(".text")
 
-pices_text.textContent = pices
+// pices_text.textContent = pices
+
+
+// const pices = localStorage.getItem("basket_pices");
+// let myArray = [];
+// if (pices) {
+//     try {
+//         myArray = JSON.parse(pices);
+//     } catch (e) {
+//         console.error("JSON parsing error:", e);
+//     }
+// }
+
+// let allproducts = document.querySelectorAll(".product");
+
+// allproducts.forEach(product => {
+//     let product_name = product.querySelector(".product_name")
+//     let pices = product.querySelector(".text")
+
+//     myArray.forEach(my => {
+//         console.log();
+//         if (product_name.textContent === my.name) {
+//             pices.textContent = my.pices
+//         }
+//     })
+// })
+
+document.addEventListener("DOMContentLoaded", () => {
+  const raw = localStorage.getItem("basket_pices");
+  let basketArr = raw ? JSON.parse(raw) : [];
+
+  document.querySelectorAll(".product").forEach(prod => {
+    const name = prod.querySelector(".product_name")?.textContent?.trim();
+    const countEl = prod.querySelector(".text");
+    const found = basketArr.find(item => item.name.trim() === name);
+    if (found) {
+      countEl.textContent = found.pices;
+    }
+  });
+});

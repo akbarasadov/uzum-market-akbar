@@ -228,6 +228,21 @@ button.onclick = () => {
 
     localStorage.setItem("basket_product_name", JSON.stringify(saved));
 
+
+    const product = {
+        name: pices_text.textContent,
+        pices: text.textContent
+    };
+
+
+
+    const basket = JSON.parse(localStorage.getItem("basket_pices")) || [];
+
+    basket.push(product);
+
+    localStorage.setItem("basket_pices", JSON.stringify(basket));
+
+
     window.location.href = "/pages/basket/index.html";
 };
 
@@ -249,17 +264,23 @@ if (password || email) {
 }
 
 
+let img_products = document.querySelectorAll(".img_products")
+let product_bg_img = document.querySelector(".product_bg_img")
 
-// // core version + navigation, pagination modules:
-// import Swiper from 'swiper';
-// import { Navigation, Pagination } from 'swiper/modules';
-// // import Swiper and modules styles
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
+if (img_products.length > 0) {
+    const firstImg = img_products[0];
+    firstImg.classList.add("active_img");
+    product_bg_img.setAttribute("src", firstImg.getAttribute("src"));
+}
 
-// // init Swiper:
-// const swiper = new Swiper('.swiper', {
-//   // configure Swiper to use modules
-//   modules: [Navigation, Pagination],
-// });
+img_products.forEach(img => {
+    img.onclick = () => {
+        let src = img.getAttribute("src")
+        product_bg_img.setAttribute("src", src)
+
+        img_products.forEach(product_img => {
+            product_img.classList.remove("active_img")
+        })
+        img.classList.add("active_img")
+    }
+})
