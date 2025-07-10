@@ -257,7 +257,7 @@ let users = await res2.json()
 
 if (password || email) {
     sign_text.textContent = users[0].name
-    sign.setAttribute("href", "")
+    sign.setAttribute("href", "/pages/my_office/index.html")
 } else {
     sign_text.textContent = "Войти"
     sign.setAttribute("href", "/pages/sign-in/index.html")

@@ -29,7 +29,6 @@
     }
 
     .catalog .categ p {
-        font-family: Gilroy;
         font-weight: 600;
         font-size: 32px;
         margin: 10px 0;
@@ -175,7 +174,6 @@
 }
 
 .gar {
-    font-family: Gilroy;
     font-weight: 500;
     font-size: 12px;
     text-decoration: line-through;

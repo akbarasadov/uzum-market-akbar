@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Gilroy;
+    font-family: Inter, serif;
 }
 
 .container {
@@ -13,7 +13,6 @@
 .body {
     display: flex;
 
-
     h1 {
         font-weight: 600;
         font-size: 32px;
@@ -21,13 +20,11 @@
     }
 
     .sale_price {
-        font-family: Gilroy;
         font-weight: 600;
         font-size: 28px;
     }
 
     .gar {
-        font-family: Gilroy;
         font-weight: 500;
         font-size: 21px;
         text-decoration: line-through;
@@ -57,102 +54,109 @@
     .btnsab:hover {
         cursor: pointer;
     }
+}
 
-    .pices {
-        width: 89px;
-        height: 30px;
-        border-radius: 3px;
-        border: 1px solid #ACACAC;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-inline: 9px;
-        margin-bottom: 26px;
-    }
+.pices {
+    width: 89px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #ACACAC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 9px;
+    margin-bottom: 26px;
+}
 
-    .pices button {
-        all: unset;
-    }
+.pices button {
+    all: unset;
+}
 
-    .description {
-        font-family: Gilroy;
-        font-weight: 400;
-        font-size: 14px;
-        padding-bottom: 26px;
-    }
+.description {
+    font-weight: 400;
+    font-size: 14px;
+    padding-bottom: 26px;
+}
 
-    .btn1 {
-        width: 176px;
-        height: 32px;
-        font-family: Gilroy;
-        font-weight: 600;
-        font-size: 13px;
-        color: #FFFFFF;
-        border-radius: 4px;
-        background: #7000FF;
-        border: none;
-    }
+.btn1 {
+    width: 176px;
+    height: 32px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #FFFFFF;
+    border-radius: 4px;
+    background: #7000FF;
+    border: none;
+}
 
-    .btn2 {
-        width: 176px;
-        height: 32px;
-        border-radius: 4px;
-        border: 1px solid #7000FF;
-        color: #7000FF;
-        background: none;
-        font-family: Gilroy;
-        font-weight: 500;
-        font-size: 13px;
-    }
+.btn2 {
+    width: 176px;
+    height: 32px;
+    border-radius: 4px;
+    border: 1px solid #7000FF;
+    color: #7000FF;
+    background: none;
+    font-weight: 500;
+    font-size: 13px;
+}
 
-    .line {
-        border: 1px solid #ACACAC;
-        width: 100%;
-        margin-bottom: 26px;
-    }
+.line {
+    border: 1px solid #ACACAC;
+    width: 100%;
+    margin-bottom: 26px;
+}
 
-    .all img {
-        width: 83px;
-        height: 100px;
-        display: flex;
+.all img {
+    width: 83px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.left {
+    display: flex;
+    gap: 10px;
+    margin-right: 53px;
+}
+
+.bg img {
+    width: 380px;
+    height: 461px;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.logo-image {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.all {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.product_bg_img {
+    transition: 0.3s;
+}
+
+.active_img {
+    border-radius: 15px;
+    border: 1px solid black;
+}
+
+@media (max-width: 576px) {
+    .body {
         flex-direction: column;
-        object-fit: contain;
-        cursor: pointer;
     }
 
-    .left {
-        display: flex;
-        gap: 10px;
-        margin-right: 53px;
-    }
-
-    .bg img {
-        width: 380px;
-        height: 461px;
-        object-fit: contain;
-        transition: 0.3s;
-    }
-
-    .logo-image {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        width: 50px;
-        height: 50px;
-    }
-
-    .all {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-    }
-
-    .product_bg_img {
-        transition: 0.3s;
-    }
-
-    .active_img {
-        border-radius: 15px;
-        border: 1px solid black;
+    .all img{
+        max-width: 100%;
     }
 }

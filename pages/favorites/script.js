@@ -201,12 +201,40 @@ function attachFavoriteEvents() {
     allproducts.forEach(product => {
         let favoritesBtn = product.querySelector(".favorites");
         let favoritesImg = product.querySelector(".favorites img");
-        let text = product.querySelector(".a");
+        let text = product.querySelector(".a_title_a");
         let title = text.textContent.trim();
+
+
+        //     favoritesBtn.onclick = (e) => {
+        //         e.stopPropagation();
+
+        //         let saved = JSON.parse(localStorage.getItem("favorites_product_name")) || [];
+
+        //         if (favoritesBtn.classList.contains("noselect")) {
+        //             favoritesBtn.classList.remove("noselect");
+        //             favoritesBtn.classList.add("select");
+        //             favoritesImg.src = "/public/Vector (1).png";
+
+        //             if (!saved.includes(title)) {
+        //                 saved.push(title);
+        //             }
+
+        //             localStorage.setItem("favorites_product_name", JSON.stringify(saved));
+        //         } else {
+        //             favoritesBtn.classList.remove("select");
+        //             favoritesBtn.classList.add("noselect");
+        //             favoritesImg.src = "/public/Vector.png";
+
+        //             saved = saved.filter(t => t !== title);
+        //             localStorage.setItem("favorites_product_name", JSON.stringify(saved));
+
+        //             product.remove();
+
+        //             reload(all, Favorites, grid);
+        //         }
 
         favoritesBtn.onclick = (e) => {
             e.stopPropagation();
-            product.remove();
 
             let saved = JSON.parse(localStorage.getItem("favorites_product_name")) || [];
 
@@ -228,11 +256,12 @@ function attachFavoriteEvents() {
                 saved = saved.filter(t => t !== title);
                 localStorage.setItem("favorites_product_name", JSON.stringify(saved));
 
+                product.remove(); // <-- faqat bu yerga qo'yiladi
                 reload(all, Favorites, grid);
-
             }
         };
     });
+
 }
 
 
@@ -266,7 +295,6 @@ if (product.length === 0) {
     }, 10);
 }
 
-
 let sign_text = document.querySelector(".sign-in p")
 let sign = document.querySelector(".sign-in")
 
@@ -278,7 +306,7 @@ let users = await res2.json()
 
 if (password || email) {
     sign_text.textContent = users[0].name
-    sign.setAttribute("href", "")
+    sign.setAttribute("href", "/pages/my_office/index.html")
 } else {
     sign_text.textContent = "Войти"
     sign.setAttribute("href", "/pages/sign-in/index.html")

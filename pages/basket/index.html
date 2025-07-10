@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/pages/style/basket.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet"
         href="https://gistcdn.githack.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css">
 </head>
@@ -86,7 +89,7 @@
         <div class="background"></div>
 
         <div class="bottom" style="display: none;"></div>
-        
+
         <div class="catalog">
             <p class="p">Категории товаров</p>
             <div class="categ">
@@ -112,6 +115,12 @@
             </div>
 
         </div>
+    </div>
+
+    <div class="dialog" id="purchaseDialog">
+        <h3>✔️ Заказ принят!</h3>
+        <p>Товар в вашей корзине успешно обработан.</p>
+        <button onclick="closeDialog()">Закрывать</button>
     </div>
 
     <script type="module" src="/pages/basket/script.js"></script>

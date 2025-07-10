@@ -36,7 +36,7 @@ export function Favorites(item) {
             </button>
         </div>
         <div class="data">
-            <p class="a">${item.title}</p>
+            <p class="a_title_a">${item.title}</p>
             <div class="b">
                 <div class="left">
                     <p class="number n1 ${gar} ${gar_text} ${g1}">${sale.toLocaleString('ru-RU')}</p>

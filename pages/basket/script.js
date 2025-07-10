@@ -17,6 +17,7 @@ try {
 }
 
 
+
 let res = await fetch("http://localhost:8080/products");
 let product = await res.json();
 
@@ -100,7 +101,6 @@ const setupProductEvents = (product) => {
     let plus = product.querySelector(".plus");
     let pices_text = product.querySelector(".text");
     let product_price = product.querySelector(".price");
-    let remove = product.querySelector(".delete");
 
     let basePrice = parseInt(product_price.textContent.replace(/\D/g, ''));
 
@@ -380,7 +380,6 @@ overlay.onclick = () => {
     overlay.style.display = 'none';
 }
 
-
 let sign_text = document.querySelector(".sign-in p")
 let sign = document.querySelector(".sign-in")
 
@@ -392,7 +391,7 @@ let users = await res2.json()
 
 if (password || email) {
     sign_text.textContent = users[0].name
-    sign.setAttribute("href", "")
+    sign.setAttribute("href", "/pages/my_office/index.html")
 } else {
     sign_text.textContent = "Войти"
     sign.setAttribute("href", "/pages/sign-in/index.html")
@@ -433,15 +432,28 @@ if (password || email) {
 // })
 
 document.addEventListener("DOMContentLoaded", () => {
-  const raw = localStorage.getItem("basket_pices");
-  let basketArr = raw ? JSON.parse(raw) : [];
+    const raw = localStorage.getItem("basket_pices");
+    let basketArr = raw ? JSON.parse(raw) : [];
 
-  document.querySelectorAll(".product").forEach(prod => {
-    const name = prod.querySelector(".product_name")?.textContent?.trim();
-    const countEl = prod.querySelector(".text");
-    const found = basketArr.find(item => item.name.trim() === name);
-    if (found) {
-      countEl.textContent = found.pices;
-    }
-  });
+    document.querySelectorAll(".product").forEach(prod => {
+        const name = prod.querySelector(".product_name")?.textContent?.trim();
+        const countEl = prod.querySelector(".text");
+        const found = basketArr.find(item => item.name.trim() === name);
+        if (found) {
+            countEl.textContent = found.pices;
+        }
+    });
 });
+
+let buy = document.querySelector(".buy")
+let dialogBtn = document.querySelector(".dialog button")
+let container = document.querySelector("body")
+
+buy.onclick = () => {
+    document.getElementById('purchaseDialog').classList.add('show');
+    let issued = localStorage.setItem("issued", JSON.stringify(titles))
+}
+
+dialogBtn.onclick = () => {
+    document.getElementById('purchaseDialog').classList.remove('show');
+}

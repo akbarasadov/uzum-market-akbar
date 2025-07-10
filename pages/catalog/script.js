@@ -206,7 +206,6 @@ allproducts.forEach(product => {
     };
 });
 
-
 let sign_text = document.querySelector(".sign-in p")
 let sign = document.querySelector(".sign-in")
 
@@ -218,7 +217,7 @@ let users = await res3.json()
 
 if (password || email) {
     sign_text.textContent = users[0].name
-    sign.setAttribute("href", "")
+    sign.setAttribute("href", "/pages/my_office/index.html")
 } else {
     sign_text.textContent = "Войти"
     sign.setAttribute("href", "/pages/sign-in/index.html")
